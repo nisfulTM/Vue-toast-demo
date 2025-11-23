@@ -1,0 +1,16 @@
+import { Meta, Story, Canvas, Controls, Description } from '@storybook/addon-docs/blocks';
+import * as ToastStories from './ToastControls.stories';
+
+<Meta of={ToastStories} title="My Components/Toast Controls" />
+
+# Toast
+
+A **toast notification** component. Use it to display dismissible messages (success, error, info) to users.
+
+## Usage
+
+Use the `useToast` composable to trigger messages from anywhere in your Vue app.
+
+```js
+const { showToast } = useToast();
+showToast("Your message", "success");

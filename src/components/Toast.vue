@@ -2,7 +2,7 @@
   <transition name="fade">
     <div
       v-if="visible"
-      class="fixed bottom-5 right-5 rounded-lg px-4 py-3 shadow-lg text-white"
+      class="fixed bottom-14 right-5 rounded-lg px-4 py-3 shadow-lg text-white"
       :class="toastClass"
     >
       {{ message }}

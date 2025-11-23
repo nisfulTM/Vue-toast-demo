@@ -1,21 +1,15 @@
-/** @type { import('@storybook/vue3-vite').Preview } */
-import './tailwind.css';
-const preview = {
-  parameters: {
-    controls: {
-      matchers: {
-       color: /(background|color)$/i,
-       date: /Date$/i,
-      },
-    },
+import { setup } from '@storybook/vue3';
+import { Quasar } from 'quasar';
 
-    a11y: {
-      // 'todo' - show a11y violations in the test UI only
-      // 'error' - fail CI on a11y violations
-      // 'off' - skip a11y checks entirely
-      test: "todo"
-    }
-  },
-};
+// Quasar styles
+import 'quasar/src/css/index.sass';
+import '@quasar/extras/material-icons/material-icons.css';
 
-export default preview;
+// Tailwind (optional)
+import './tailwind.css'
+
+setup((app) => {
+  app.use(Quasar, {
+    config: {},
+  });
+});

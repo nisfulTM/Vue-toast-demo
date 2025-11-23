@@ -12,7 +12,7 @@ export function useToast() {
   return {
     showToast,
     toast: readonly(state.toast)
-  }
+  } 
 }
 
 export const toastState = state
